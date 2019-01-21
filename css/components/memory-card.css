@@ -1,0 +1,9 @@
+.memory-card {
+  background-color: #f25a70;
+  width: 155px;
+  height: 155px;
+  border-radius: 30px;
+}
+.memory-card > .icon {
+  width: 100px;
+}
