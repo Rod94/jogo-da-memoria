@@ -1,12 +1,19 @@
 const $root = document.querySelector("#root");
-const $memoryCard = document.createElement("article");
-const $icon = `<img 
-      class='icon' 
-      src='img/icon-collabcode.png' 
-      alt='Mascote Collabcode'>
-      </img>`;
+const $container = document.createElement("section");
+const $memoryTurned = `<article class="memory-turned">
+<img class="icon" 
+src="img/icon-bug.png" 
+alt="Bug icon">
+</article>`;
+const $memoryCard = `<article class="memory-card">
+<img class="icon" 
+src="img/icon-collabcode.png" 
+alt="Mascote Collabcode">
+</img>
+</article>`;
 
-$memoryCard.classList.add("memory-card");
+$container.classList.add("container");
 
-$root.insertBefore($memoryCard, null);
-$memoryCard.insertAdjacentHTML("afterbegin", $icon);
+$root.insertBefore($container, null);
+$container.insertAdjacentHTML("afterbegin", $memoryTurned);
+$container.insertAdjacentHTML("beforeend", $memoryCard);
