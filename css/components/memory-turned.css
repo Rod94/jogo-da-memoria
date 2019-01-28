@@ -19,6 +19,6 @@
 .memory-turned > .icon {
   width: 100px;
   height: 100px;
-  margin-bottom: 25px;
-  position: relative;
+  transform: translateY(-13px);
+  position: absolute;
 }

@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 375px;
   height: 812px;
   background-color: #fff;
