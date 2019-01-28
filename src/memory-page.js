@@ -23,5 +23,3 @@ $container.insertAdjacentHTML("beforeend", $memoryCard);
 $container.insertAdjacentHTML("beforeend", $memoryCard);
 $container.insertAdjacentHTML("beforeend", $memoryCard);
 $container.insertAdjacentHTML("beforeend", $memoryCard);
-$container.insertAdjacentHTML("beforeend", $memoryCard);
-$container.insertAdjacentHTML("beforeend", $memoryCard);

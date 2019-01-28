@@ -3,6 +3,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 375px;
-  height: 812px;
+  height: 667px;
   background-color: #fff;
+  border: 1px solid #000;
 }
