@@ -4,7 +4,8 @@ function createMemoryCard() {
   const $iconCollab = `<img
   src="img/icon-collabcode.png"
   alt="Gueio mascote Collabcode"
-  class="icon">
+  class="icon"
+  onclick="handleClick()">
   `;
 
   $memoryCard.classList.add("memory-card");
@@ -19,7 +20,8 @@ function createMemoryCardFront() {
   const $iconBug = `<img
   src="img/icon-bug.png"
   alt="Icone bug"
-  class="icon">
+  class="icon"
+  onclick="handleClick()">
   `;
 
   $memoryCardFront.classList.add("memory-card");
@@ -27,4 +29,7 @@ function createMemoryCardFront() {
   $wrapCards.insertBefore($memoryCardFront, null);
 
   $memoryCardFront.insertAdjacentHTML("afterbegin", $iconBug);
+}
+function handleClick() {
+  console.log("ae");
 }
