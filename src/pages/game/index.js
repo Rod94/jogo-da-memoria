@@ -5,20 +5,26 @@ const $memoryCard = createMemoryCard(
   "Gueio mascote CollabCode",
   "img/icon-collabcode.png"
 );
-const $memoryCardFront = createMemoryCard(
+const $memoryCardBug = createMemoryCard(
   "Icone de Bug",
   "img/icon-bug.png",
   "-front"
 );
-
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
-$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
+const $memoryCardJS = createMemoryCard("Icone JS", "img/icon-js.png", "-front");
+const $memoryCardC = createMemoryCard("Icone do C", "img/icon-c.png", "-front");
+const $memoryCardPHP = createMemoryCard(
+  "Icone do PHP",
+  "img/icon-php.png",
+  "-front"
+);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
 
 $root.insertAdjacentElement("beforeend", $cardsWrapper);
 
