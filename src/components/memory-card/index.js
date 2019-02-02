@@ -1,47 +1,17 @@
-/*const createMemoryCard = () => `
-  <article class = "memory-card">
+const createMemoryCard = (alt, src, nameClass) => ` 
+  <article class = "memory-card ${nameClass}">
     <img
     class="icon"
-    src="img/icon-collabcode.png"
-    alt="Gueio mascote Collabcode"
+    src="${src}" 
+    alt="${alt}"
     onclick="handleClick()">
   </article>
-  `;
+`;
 
-const createMemoryCardFront = () => `
-  <article class = "memory-card -front">
-    <img
-    class="icon"
-    src="img/icon-bug.png"
-    alt="Icone bug"
-    onclick="handleClick()">
-  </article>
-  `;
-*/
-function handleClick() {
-  console.log("ae");
-}
+const handleClick = () => console.log("ae");
 
-const createMemoryCard = isFront => {
-  if (isFront !== true) {
-    return `
-      <article class = "memory-card">
-        <img
-        class="icon"
-        src="img/icon-collabcode.png"
-        alt="Gueio mascote Collabcode"
-        onclick="handleClick()">
-      </article>
-  `;
-  } else {
-    return `
-      <article class = "memory-card -front">
-        <img
-        class="icon"
-        src="img/icon-bug.png"
-        alt="Icone bug"
-        onclick="handleClick()">
-      </article>
-  `;
-  }
-};
+//nome do parametro poderia ser qualquer um!
+//if ternário, se for verdade a condição antes do `?` entao atribui o valor depois do ?
+//caso seja mentira, será atribuido o que estiver depois do :
+
+//parametros pegos da page, sendo atribuidos
