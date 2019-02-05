@@ -1,6 +1,9 @@
 const $root = document.querySelector("#root");
 
 const $cardsWrapper = createCardsWrapper();
+
+const createMemoryCard = memoryCard();
+
 const $memoryCard = createMemoryCard({
   nameClass: "",
   alt: "Gueio mascote CollabCode",
