@@ -38,7 +38,7 @@ function memoryCard() {
     }
   `;
   $head.insertBefore($style, null);
-  //está retornando o createMemoryCard da pages
+  //está retornando o JSON do createMemoryCard da pages
   return ({ src, nameClass, alt }) => ` 
   <article class = "memory-card ${nameClass}">
     <img
