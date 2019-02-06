@@ -4,28 +4,19 @@ const $cardsWrapper = createCardsWrapper();
 
 const createMemoryCard = memoryCard();
 
-const $memoryCard = createMemoryCard({
-  nameClass: "",
-  alt: "Gueio mascote CollabCode",
-  src: "img/icon-collabcode.png"
-});
 const $memoryCardBug = createMemoryCard({
   alt: "Icone de Bug",
-  src: "img/icon-bug.png",
-  nameClass: "-front"
+  src: "img/icon-bug.png"
 });
 const $memoryCardJS = createMemoryCard({
-  nameClass: "-front",
   src: "img/icon-js.png",
   alt: "Icone JavaScript"
 });
 const $memoryCardC = createMemoryCard({
-  nameClass: "-front",
   alt: "Icone do C++",
   src: "img/icon-c.png"
 });
 const $memoryCardPHP = createMemoryCard({
-  nameClass: "-front",
   alt: "Icone do PHP",
   src: "img/icon-php.png"
 });
