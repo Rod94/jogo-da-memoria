@@ -65,11 +65,19 @@ function memoryCard() {
   </div> 
 `;
 }
+function handleClick($component) {
+  const $cardsActivated = document.querySelectorAll(".memory-card.-active");
 
-const handleClick = function($component) {
-  $component.classList.toggle("-active");
-};
+  if ($cardsActivated.length < 2) {
+    $component.classList.toggle("-active");
+  }
 
+  if ($cardsActivated.length === 2) {
+    setTimeout(() => {
+      $cardsActivated.forEach(e => e.classList.remove("-active"));
+    }, 2000);
+  }
+}
 //nome do parametro poderia ser qualquer um!
 //if ternário, se for verdade a condição antes do `?` entao atribui o valor depois do ?
 //caso seja mentira, será atribuido o que estiver depois do :
