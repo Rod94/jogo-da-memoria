@@ -47,6 +47,7 @@ function memoryCard() {
     }
   `;
   $head.insertBefore($style, null);
+
   //está retornando o JSON do createMemoryCard da pages
   return ({ src, alt }) => ` 
   <div class = "memory-card" onClick= "handleClick(this)">
@@ -65,21 +66,27 @@ function memoryCard() {
   </div> 
 `;
 }
-function handleClick($component) {
-  const $cardsActivated = document.querySelectorAll(".memory-card.-active");
-
-  if ($cardsActivated.length < 2) {
+const handleClick = $component => {
+  if (qtdActiveMemoryCard < 2) {
     $component.classList.toggle("-active");
   }
-
-  if ($cardsActivated.length === 2) {
+  if (qtdActiveMemoryCard == 1) {
     setTimeout(() => {
-      $cardsActivated.forEach(e => e.classList.remove("-active"));
-    }, 2000);
+      const $activeMemoryCards = document.querySelectorAll(
+        ".memory-card.-active"
+      );
+      $activeMemoryCards.forEach($memoryCard => {
+        $memoryCard.classList.remove("-active");
+      });
+      qtdActiveMemoryCard = 0;
+    }, 1200);
   }
-}
+};
+
 //nome do parametro poderia ser qualquer um!
 //if ternário, se for verdade a condição antes do `?` entao atribui o valor depois do ?
 //caso seja mentira, será atribuido o que estiver depois do :
 
 //parametros pegos da page, sendo atribuidos
+
+// metodo forEach percorre um array.
