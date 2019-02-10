@@ -20,10 +20,12 @@ function memoryCard() {
       cursor: pointer;
       position: absolute;
     }
-    .memory-card.-active .card{
+    .memory-card.-active .card,
+    .memory-card.-acerto .card{
       display: none;
     }
-    .memory-card.-active .card.-front{
+    .memory-card.-active .card.-front,
+    .memory-card.-acerto .card.-front{
       display: flex;
     }
     .memory-card .card.-front {
@@ -67,10 +69,36 @@ function memoryCard() {
 `;
 }
 const handleClick = $component => {
-  if (qtdActiveMemoryCard < 2) {
-    $component.classList.toggle("-active");
+  if (!$component.classList.contains("-active")) {
+    if (qtdActiveMemoryCard < 2) {
+      $component.classList.toggle("-active");
+    }
+    if (qtdActiveMemoryCard == 1) {
+      checkedCards();
+    }
   }
-  if (qtdActiveMemoryCard == 1) {
+};
+const checkedCards = () => {
+  const $checkCards = Array.from(
+    //passando para Array, se nao tiver o metodo Array.from(), é pego como NodeList.
+    document.querySelectorAll(".memory-card.-active")
+  );
+
+  const check = [
+    ...new Set( //objeto Set permite armazenar valores, nesse caso está mapeando e pegando o "src"
+      $checkCards.map((
+        card //arrow function
+      ) => card.querySelector(".-front .icon").getAttribute("src"))
+    )
+  ];
+  if (check.length == 1) {
+    console.log("Acertou, muito bem!");
+    $checkCards.forEach(card => {
+      //arrow function
+      card.classList.add("-acerto");
+      card.classList.remove("-active");
+    });
+  } else {
     setTimeout(() => {
       const $activeMemoryCards = document.querySelectorAll(
         ".memory-card.-active"
@@ -79,6 +107,7 @@ const handleClick = $component => {
         $memoryCard.classList.remove("-active");
       });
       qtdActiveMemoryCard = 0;
+      console.log("Errou! Tente novamente");
     }, 1200);
   }
 };
