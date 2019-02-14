@@ -21,12 +21,22 @@ function memoryCard() {
       position: absolute;
     }
     .memory-card.-active .card,
-    .memory-card.-acerto .card{
+    .memory-card.-acerto .card,
+    .memory-card.-erro .card{
       display: none;
     }
     .memory-card.-active .card.-front,
-    .memory-card.-acerto .card.-front{
+    .memory-card.-acerto .card.-front,
+    .memory-card.-erro .card.-front{
       display: flex;
+    }
+    .memory-card.-acerto .card.-front{
+      border-top: 3px inset #238E23;
+      border-left: 3px inset #238E23;
+    }
+    .memory-card.-erro .card.-front{
+      border-bottom: 3px outset #B22222;
+      border-right: 3px outset #B22222;
     }
     .memory-card .card.-front {
       background-color: #fff;
@@ -71,7 +81,7 @@ function memoryCard() {
 const handleClick = $component => {
   if (!$component.classList.contains("-active")) {
     if (qtdActiveMemoryCard < 2) {
-      $component.classList.toggle("-active");
+      $component.classList.add("-active");
     }
     if (qtdActiveMemoryCard == 1) {
       checkedCards();
@@ -99,16 +109,16 @@ const checkedCards = () => {
       card.classList.remove("-active");
     });
   } else {
+    console.log("Errou! Tente novamente");
     setTimeout(() => {
       const $activeMemoryCards = document.querySelectorAll(
         ".memory-card.-active"
       );
       $activeMemoryCards.forEach($memoryCard => {
-        $memoryCard.classList.remove("-active");
+        $memoryCard.classList.add("-erro");
       });
       qtdActiveMemoryCard = 0;
-      console.log("Errou! Tente novamente");
-    }, 1200);
+    }, 700);
   }
 };
 
