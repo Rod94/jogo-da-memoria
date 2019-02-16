@@ -21,16 +21,16 @@ function memoryCard() {
       position: absolute;
     }
     .memory-card.-active .card,
-    .memory-card.-acerto .card,
+    .memory-card.-score .card,
     .memory-card.-erro .card{
       display: none;
     }
     .memory-card.-active .card.-front,
-    .memory-card.-acerto .card.-front,
+    .memory-card.-score .card.-front,
     .memory-card.-erro .card.-front{
       display: flex;
     }
-    .memory-card.-acerto .card.-front{
+    .memory-card.-score .card.-front{
       border-top: 3px inset #238E23;
       border-left: 3px inset #238E23;
     }
@@ -102,10 +102,11 @@ const checkedCards = () => {
     )
   ];
   if (check.length == 1) {
-    console.log("Acertou, muito bem!");
+    score += 20;
+    console.log("Score: ", score);
     $checkCards.forEach(card => {
       //arrow function
-      card.classList.add("-acerto");
+      card.classList.add("-score");
       card.classList.remove("-active");
     });
   } else {
@@ -115,7 +116,7 @@ const checkedCards = () => {
         ".memory-card.-active"
       );
       $activeMemoryCards.forEach($memoryCard => {
-        $memoryCard.classList.add("-erro");
+        $memoryCard.classList.remove("-active");
       });
       qtdActiveMemoryCard = 0;
     }, 700);

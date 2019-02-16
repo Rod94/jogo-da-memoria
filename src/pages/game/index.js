@@ -1,6 +1,7 @@
 const $root = document.querySelector("#root");
 const $cardsWrapper = createCardsWrapper();
-
+let qtdActiveMemoryCard = 0;
+let score = 0;
 const createMemoryCard = memoryCard();
 
 const $memoryCardBug = createMemoryCard({
