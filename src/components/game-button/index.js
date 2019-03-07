@@ -1,10 +1,10 @@
-const startButton = (function() {
+const gameButton = (function() {
   const module = {};
   module._style = () => {
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
     $style.textContent = `
-      .start-button{
+      .game-button{
         position: absolute;
         width: 90px;
         height: 90px;
@@ -23,13 +23,13 @@ const startButton = (function() {
     `;
     $head.insertBefore($style, null);
   };
-  module.create = () => {
+  module.render = () => {
     module._style();
     return `
-    <button class="start-button">start</button>
+    <button class="game-button">start</button>
     `;
   };
   return {
-    create: module.create
+    render: module.render
   };
 })();
