@@ -10,6 +10,8 @@
 
   const $gameButton = gameButton.render();
 
+  const $gameShadow = gameShadow.create();
+
   const $memoryCardBug = createMemoryCard({
     alt: "Icone de Bug",
     src: "img/icon-bug.png"
@@ -38,6 +40,7 @@
 
   $root.insertAdjacentHTML("beforeend", $pointBar);
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
+  $root.insertAdjacentHTML("beforeend", $gameShadow);
   $root.insertAdjacentHTML("beforeend", $gameButton);
 })();
 //caminho dos parametros na ordem `alt, src, nameClass`
