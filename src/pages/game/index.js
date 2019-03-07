@@ -5,6 +5,8 @@
 
   const createMemoryCard = memoryCard.create();
 
+  const $pointBar = pointBar.create();
+
   const $memoryCardBug = createMemoryCard({
     alt: "Icone de Bug",
     src: "img/icon-bug.png"
@@ -21,6 +23,7 @@
     alt: "Icone do PHP",
     src: "img/icon-php.png"
   });
+
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardJS);
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardBug);
@@ -30,6 +33,7 @@
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
 
+  $root.insertAdjacentHTML("beforeend", $pointBar);
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
 })();
 //caminho dos parametros na ordem `alt, src, nameClass`
