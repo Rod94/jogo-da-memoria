@@ -36,9 +36,9 @@
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
 
-  $root.insertAdjacentHTML("beforeend", $startButton);
   $root.insertAdjacentHTML("beforeend", $pointBar);
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
+  $root.insertAdjacentHTML("beforeend", $startButton);
 })();
 //caminho dos parametros na ordem `alt, src, nameClass`
 //page passa informação para o components
