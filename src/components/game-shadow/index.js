@@ -14,7 +14,8 @@ const gameShadow = (function() {
         opacity: 0.7;
       }
       .game-shadow.-active{
-        display: none;
+        opacity: 0;
+        transition: opacity linear 1.5s;
       }`;
     $head.insertBefore($style, null);
   };

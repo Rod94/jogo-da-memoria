@@ -18,10 +18,11 @@ const gameButton = (function() {
         cursor: pointer;
         bottom: 120px;
         left: 50%;
-        transform: translateX(-50%);        
+        transform: translateX(-50%);  
       }
       .game-button.-active{
-        display: none;
+        opacity: 0;
+        transition: opacity ease-in 1.0s;
       }
     `;
     $head.insertBefore($style, null);
@@ -29,7 +30,7 @@ const gameButton = (function() {
   module.render = () => {
     module._style();
     return `
-    <button class="game-button" onClick="gameButton.handleClick(this)">start</button>
+      <button class="game-button" onClick="gameButton.handleClick(this)">start</button>
     `;
   };
   module.handleClick = $component => {
