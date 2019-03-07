@@ -58,7 +58,7 @@ const memoryCard = (function() {
 
     //está retornando o JSON do createMemoryCard da pages
     return ({ src, alt }) => ` 
-      <div class = "memory-card" onClick= "memoryCard.handleClick(this)">
+      <div class="memory-card" onClick="memoryCard.handleClick(this)">
         <article class = "card -front">
           <img
           class="icon"

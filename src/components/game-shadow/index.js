@@ -12,6 +12,9 @@ const gameShadow = (function() {
         position: fixed;
         top: 0;
         opacity: 0.7;
+      }
+      .game-shadow.-active{
+        display: none;
       }`;
     $head.insertBefore($style, null);
   };
