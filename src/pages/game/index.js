@@ -1,11 +1,14 @@
 (function() {
   //IIFE função anonima envolvendo o escopo e logo em seguida ela é executada
   const $root = document.querySelector("#root");
+
   const $cardsWrapper = createCardsWrapper();
 
   const createMemoryCard = memoryCard.create();
 
   const $pointBar = pointBar.create();
+
+  const $startButton = startButton.create();
 
   const $memoryCardBug = createMemoryCard({
     alt: "Icone de Bug",
@@ -33,6 +36,7 @@
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardC);
   $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardPHP);
 
+  $root.insertAdjacentHTML("beforeend", $startButton);
   $root.insertAdjacentHTML("beforeend", $pointBar);
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
 })();
