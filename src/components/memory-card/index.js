@@ -105,7 +105,8 @@ const memoryCard = (function() {
       ];
       if (check.length == 1) {
         store.score += 20;
-        console.log("Score: ", store.score);
+        document.querySelector(".point-bar > .number").textContent =
+          store.score;
         $checkCards.forEach(card => {
           //arrow function
           card.classList.add("-score");

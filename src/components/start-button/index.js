@@ -10,8 +10,11 @@ const startButton = (function() {
         height: 90px;
         text-transform: uppercase;
         border-radius: 50%;
-        background-color: #00ff00;
+        background-color: #2E8B57;
         color: #fff;
+        border: 2px solid #FFF0F5;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
         cursor: pointer;
         bottom: 120px;
         left: 50%;
