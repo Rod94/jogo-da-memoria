@@ -20,27 +20,18 @@ const gameButton = (function() {
         left: 50%;
         transform: translateX(-50%);  
       }
-      .game-button.-active{
-        opacity: 0;
-        transition: opacity ease-in 1.0s;
-      }
     `;
     $head.insertBefore($style, null);
   };
-  module.render = () => {
+
+  module.render = content => {
     module._style();
     return `
-      <button class="game-button" onClick="gameButton.handleClick(this)">start</button>
+      <button class="game-button">${content}</button>
     `;
   };
-  module.handleClick = $component => {
-    if (!$component.classList.contains("-active")) {
-      $component.classList.add("-active");
-      document.querySelector(".game-shadow").classList.add("-active");
-    }
-  };
+
   return {
-    render: module.render,
-    handleClick: module.handleClick
+    render: module.render
   };
 })();

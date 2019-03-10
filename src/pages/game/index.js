@@ -8,9 +8,7 @@
 
   const $pointBar = pointBar.create();
 
-  const $gameButton = gameButton.render();
-
-  const $gameShadow = gameShadow.create();
+  const $layerStart = layerStart.render("Start");
 
   const $memoryCardBug = createMemoryCard({
     alt: "Icone de Bug",
@@ -40,8 +38,7 @@
 
   $root.insertAdjacentHTML("beforeend", $pointBar);
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
-  $root.insertAdjacentHTML("beforeend", $gameShadow);
-  $root.insertAdjacentHTML("beforeend", $gameButton);
+  $root.insertAdjacentHTML("beforeend", $layerStart);
 })();
 //caminho dos parametros na ordem `alt, src, nameClass`
 //page passa informação para o components

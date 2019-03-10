@@ -1,11 +1,11 @@
-const gameShadow = (function() {
+const transparecyLayer = (function() {
   const module = {};
 
   module._style = () => {
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
     $style.textContent = `
-      .game-shadow{
+      .transparecy-layer{
         width: 100%;
         height: 100%;
         background-color: #e9e9e9;
@@ -13,19 +13,16 @@ const gameShadow = (function() {
         top: 0;
         opacity: 0.7;
       }
-      .game-shadow.-active{
-        opacity: 0;
-        transition: opacity linear 1.5s;
-      }`;
+      `;
     $head.insertBefore($style, null);
   };
-  module.create = () => {
+  module.render = () => {
     module._style();
     return `
-      <div class="game-shadow"></div>
+      <div class="transparecy-layer"></div>
     `;
   };
   return {
-    create: module.create
+    render: module.render
   };
 })();
