@@ -12,6 +12,10 @@ const transparecyLayer = (function() {
         position: fixed;
         top: 0;
         opacity: 0.7;
+        transition: opacity 250ms 200ms ease-out;
+      }
+      .transparecy-layer.-disable{
+        opacity: 0;
       }
       `;
     $head.insertBefore($style, null);

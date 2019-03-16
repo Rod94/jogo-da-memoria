@@ -18,7 +18,11 @@ const gameButton = (function() {
         cursor: pointer;
         bottom: 120px;
         left: 50%;
-        transform: translateX(-50%);  
+        transform: translateX(-50%);
+        transition: opacity 200ms ease-in; 
+      }
+      .game-button.-disable {
+        opacity: 0;
       }
     `;
     $head.insertBefore($style, null);
