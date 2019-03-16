@@ -19,10 +19,12 @@ const gameButton = (function() {
         bottom: 120px;
         left: 50%;
         transform: translateX(-50%);
-        transition: opacity 200ms ease-in; 
+        transition: transform 200ms linear, opacity 200ms ease-in;
+        transform-origin: bottom 2cm;
       }
       .game-button.-disable {
         opacity: 0;
+        transform: translateX(-50%) scale(2.5);
       }
     `;
     $head.insertBefore($style, null);
