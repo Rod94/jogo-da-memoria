@@ -21,7 +21,8 @@ const flatButton = (function() {
 
   module.render = () => {
     module._style();
-    return `<button class="flat-button">Login</button>`;
+    return `<button class="flat-button">Login</button>
+            <button class="flat-button">Login</button>`;
   };
   return {
     render: module.render
