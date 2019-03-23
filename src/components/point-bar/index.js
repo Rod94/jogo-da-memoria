@@ -23,7 +23,7 @@ const pointBar = (function() {
     module._style();
     return `
       <header class="point-bar">
-        <span class="number">0</span>
+        <span class="number">Score: 0</span>
       </header>
     `;
   };
