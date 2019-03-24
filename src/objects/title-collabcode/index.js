@@ -8,6 +8,7 @@ const titleCollabCode = (function() {
         color: #f25a70;
         font-size: 24px;
         text-transform: uppercase;
+        letter-spacing: 0.6px;
       }
     `;
     $head.insertAdjacentElement("beforeend", $style);

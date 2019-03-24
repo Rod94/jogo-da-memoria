@@ -6,36 +6,25 @@ const logoWrapper = (function() {
     const $style = document.createElement("style");
     $style.textContent = `
     .logo-wrapper{
-      position: absolute;
-      top: 180px;
-      left: 50%;
-      transform: translateX(-50%);
+      text-align: center;
+      transform: translateY(-25%);
     }
-    .logo-collabcode{
-      width: 175px;
-      height: 175px;
-    }
-    .title-collabcode{
-      display: flex;
-      justify-content: center;
-      color: #f25a70;
-      font-size: 24px;   
-      text-transform: uppercase;
-      margin-top: 10px;
-    }`;
+    `;
+
     $head.insertAdjacentElement("beforeend", $style);
   };
 
-  module.render = (content = "") => {
+  module.render = (...$children) => {
+    //spread operator pega varios elementos e transforma num array
     module._style();
 
     return `
       <div class="logo-wrapper">
-        <img class="logo-collabcode" src="img/icon-collabcode.png" alt="gueio">
-        <h1 class="title-collabcode">${content}</h1>
+        ${$children.join("")}
       </div>`;
   };
   return {
     render: module.render
   };
 })();
+/*.join("") serve para tirar qualquer tipo de caracter que esteja atrapalhando com o uso do spread operator*/

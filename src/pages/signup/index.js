@@ -4,7 +4,10 @@
   const $loginButton = flatButton.render("Login"); //content que está no flatbutton
   const $signupButton = flatButton.render("Sign up", true); //content que está no flatbutton
 
-  const $logoWrapper = logoWrapper.render("Welcome!");
+  const $logoCollabCode = logoCollabCode.render();
+  const $titleCollabCode = titleCollabCode.render("Welcome!");
+
+  const $logoWrapper = logoWrapper.render($logoCollabCode, $titleCollabCode);
 
   $root.insertAdjacentHTML("beforeend", $loginButton);
   $root.insertAdjacentHTML("beforeend", $signupButton);
