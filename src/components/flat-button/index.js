@@ -17,6 +17,7 @@ const flatButton = (function() {
         width: 50%;
         height: 176px;
         text-transform: uppercase;
+        padding-bottom: 40px;
       }
     `;
     $head.insertAdjacentElement("beforeend", $style);
