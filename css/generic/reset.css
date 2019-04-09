@@ -6,3 +6,6 @@ button {
   font-family: inherit;
   border: none;
 }
+input {
+  border: none;
+}
