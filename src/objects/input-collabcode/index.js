@@ -11,6 +11,7 @@ const inputCollabcode = (function() {
         border-bottom: 1px solid #9c9fa0;
         display: block;
         width: 100%;
+        margin-bottom: 29px;
       }
     `;
 
