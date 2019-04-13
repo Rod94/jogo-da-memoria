@@ -20,7 +20,7 @@ const inputCollabcode = (function() {
   module.render = () => {
     module._style();
 
-    return `<input class="input-collabcode" type="email" required pattern="/^\w{n}@\w{n}$/">`;
+    return `<input class="input-collabcode" type="email">`;
   };
 
   return {
