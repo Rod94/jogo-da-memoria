@@ -7,11 +7,14 @@ const inputCollabcode = (function() {
     $style.textContent = `
       .input-collabcode{
         font-size: 18px;
+        padding-top: 12px;
         padding-bottom: 12px;
         border-bottom: 1px solid #9c9fa0;
         display: block;
         width: 100%;
-        margin-bottom: 29px;
+      }
+      .input-collabcode + .label-collabcode {
+        margin-top: 30px;
       }
     `;
 
