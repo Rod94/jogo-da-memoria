@@ -15,15 +15,17 @@ const formLogin = (function() {
 
   module._children = () => {
     const $labelCollabcode = labelCollabcode.render("Username ou e-mail");
-    const $inputCollabcode = inputCollabcode.render(
-      "example@gmail.com",
-      "email"
-    );
+    const $inputCollabcode = inputCollabcode.render({
+      placeholder: "example@gmail.com",
+      type: "email"
+    });
+
     const $passwordCollabcode = labelCollabcode.render("Password");
-    const $inputPasswordCollabcode = inputCollabcode.render(
-      "********",
-      "password"
-    );
+    const $inputPasswordCollabcode = inputCollabcode.render({
+      placeholder: "********",
+      type: "password"
+    });
+
     const $btnCollabcode = btnCollabcode.render("Login");
 
     return `

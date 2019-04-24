@@ -19,18 +19,24 @@ const formSignup = (function() {
       "example@gmail.com",
       "email"
     );
-    const $userCollabcode = labelCollabcode.render("Username");
-    const $inputUserCollabcode = inputCollabcode.render("Name-example", "text");
+
+    const $userCollabcode = labelCollabcode.render({ placeholder: "Username" });
+    const $inputUserCollabcode = inputCollabcode.render({
+      placeholder: "Name-example"
+    });
+
     const $passwordCollabcode = labelCollabcode.render("Password");
-    const $inputPasswordCollabcode = inputCollabcode.render(
-      "********",
-      "password"
-    );
+    const $inputPasswordCollabcode = inputCollabcode.render({
+      placeholder: "********",
+      type: "password"
+    });
+
     const $confirmCollabcode = labelCollabcode.render("Confirm Password");
-    const $inputconfirmCollabcode = inputCollabcode.render(
-      "********",
-      "password"
-    );
+    const $inputconfirmCollabcode = inputCollabcode.render({
+      placeholder: "********",
+      type: "password"
+    });
+
     const $btnCollabcode = btnCollabcode.render("Submit");
 
     return `
