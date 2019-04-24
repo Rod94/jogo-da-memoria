@@ -26,6 +26,11 @@ const formLogin = (function() {
       type: "password"
     });
 
+    const $linkCollab = linkCollab.render({
+      href: "#",
+      content: "Forget Password ?"
+    });
+
     const $btnCollabcode = btnCollabcode.render("Login");
 
     return `
@@ -34,6 +39,8 @@ const formLogin = (function() {
 
       ${$passwordCollabcode}
       ${$inputPasswordCollabcode}
+      
+      ${$linkCollab}
 
       ${$btnCollabcode}
     `;
