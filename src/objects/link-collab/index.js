@@ -14,8 +14,7 @@ const linkCollab = (function() {
         margin-top: 40px;
         margin-bottom: 60px;
         text-align: right;
-      }
-    
+      }    
     `;
 
     $head.insertAdjacentElement("beforeend", $style);
