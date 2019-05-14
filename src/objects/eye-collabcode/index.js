@@ -12,6 +12,7 @@ const eyeCollabcode = (function() {
         text-indent: -9999px;
         width: 24px;
         height: 15px;
+        cursor: pointer;
       }
     
     `;
@@ -19,13 +20,16 @@ const eyeCollabcode = (function() {
     $head.insertAdjacentElement("beforeend", $style);
   };
 
+  module.handleClick = () => {};
+
   module.render = () => {
     module._style();
 
-    return `<label class="eye-collabcode">Mostrar senha</label>`;
+    return `<label class="eye-collabcode" onClick=eyeCollabcode.handleClick()>Mostrar senha</label>`;
   };
 
   return {
-    render: module.render
+    render: module.render,
+    handleClick: module.handleClick
   };
 })();
