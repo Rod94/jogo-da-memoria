@@ -13,8 +13,7 @@ const eyeCollabcode = (function() {
         width: 24px;
         height: 15px;
         cursor: pointer;
-      }
-    
+      }        
     `;
 
     $head.insertAdjacentElement("beforeend", $style);
@@ -22,10 +21,10 @@ const eyeCollabcode = (function() {
 
   module.handleClick = () => {};
 
-  module.render = () => {
+  module.render = ({ attrFor = "" }) => {
     module._style();
 
-    return `<label class="eye-collabcode" onClick=eyeCollabcode.handleClick()>Mostrar senha</label>`;
+    return `<label for="${attrFor}" class="eye-collabcode" onClick=eyeCollabcode.handleClick()>Mostrar senha</label>`;
   };
 
   return {
