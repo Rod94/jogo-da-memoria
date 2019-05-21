@@ -1,4 +1,4 @@
-const formSignup = (function() {
+const formSignup = (function () {
   const module = {};
 
   module._style = () => {
@@ -15,12 +15,12 @@ const formSignup = (function() {
 
   module._children = () => {
     const $labelCollabcode = labelCollabcode.render("E-mail");
-    const $inputCollabcode = inputCollabcode.render(
-      "example@gmail.com",
-      "email"
-    );
+    const $inputCollabcode = inputCollabcode.render({
+      placeholder: "example@gmail.com",
+      type: "email"
+    });
 
-    const $userCollabcode = labelCollabcode.render({ placeholder: "Username" });
+    const $userCollabcode = labelCollabcode.render("Username");
     const $inputUserCollabcode = inputCollabcode.render({
       placeholder: "Name-example"
     });

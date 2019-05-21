@@ -1,3 +1,4 @@
-(function() {
-  login();
+(function () {
+  //login();
+  signup();
 })();
