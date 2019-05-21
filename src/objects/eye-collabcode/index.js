@@ -20,10 +20,16 @@ const eyeCollabcode = (function() {
   };
 
   module.handleClick = function() {
+    //pegando a 'for' da label
     const attrFor = this.getAttribute("for");
     const $input = document.querySelector(`#${attrFor}`);
 
-    $input.setAttribute("type", "text");
+    //condições para remover ou colocar password/text
+    if ($input.getAttribute("type") === "text") {
+      $input.setAttribute("type", "password");
+    } else {
+      $input.setAttribute("type", "text");
+    }
   };
 
   module.render = ({ attrFor = "" }) => {
