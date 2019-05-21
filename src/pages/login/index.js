@@ -1,4 +1,4 @@
-(function() {
+const login = (function () {
   const $root = document.querySelector("#root");
 
   const $loginButton = flatButton.render("Login", true); //content que está no flatbutton
@@ -13,4 +13,4 @@
   $root.insertAdjacentHTML("beforeend", $signupButton);
   $root.insertAdjacentHTML("beforeend", $logoWrapper);
   $root.insertAdjacentHTML("beforeend", $formLogin);
-})();
+});
