@@ -13,7 +13,11 @@ const eyeCollabcode = (function() {
         width: 24px;
         height: 15px;
         cursor: pointer;
-      }        
+        opacity: 0.5;
+      }
+      .eye-collabcode.-active {
+        opacity: 1;
+      }  
     `;
 
     $head.insertAdjacentElement("beforeend", $style);
@@ -26,8 +30,10 @@ const eyeCollabcode = (function() {
 
     //condições para remover ou colocar password/text
     if ($input.getAttribute("type") === "text") {
+      this.classList.remove("-active");
       $input.setAttribute("type", "password");
     } else {
+      this.classList.add("-active");
       $input.setAttribute("type", "text");
     }
   };
