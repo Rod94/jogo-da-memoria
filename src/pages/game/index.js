@@ -1,4 +1,4 @@
-(function() {
+const game = (function() {
   //IIFE função anonima envolvendo o escopo e logo em seguida ela é executada
   const $root = document.querySelector("#root");
 
@@ -39,6 +39,6 @@
   $root.insertAdjacentHTML("beforeend", $pointBar);
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
   $root.insertAdjacentHTML("beforeend", $layerStart);
-})();
+});
 //caminho dos parametros na ordem `alt, src, nameClass`
 //page passa informação para o components

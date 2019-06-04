@@ -24,12 +24,17 @@ const flatButton = (function() {
     $head.insertAdjacentElement("beforeend", $style);
   };
 
-  module.render = (content = "", active = false) => {
+  module.handleClick = path => {
+    window.location.hash = `#/${path}`;
+  }
+
+  module.render = (content = "", active = false, path = "")  => {
     module._id++; //a cada render, ele vai adicionar um flat button "unico"
     module._style(active);
-    return `<button class="flat-button-${module._id}">${content}</button>`;
+    return `<button class="flat-button-${module._id}" onClick="flatButton.handleClick('${path}')">${content}</button>`;
   };
   return {
-    render: module.render
+    render: module.render,
+    handleClick: module.handleClick
   };
 })();
