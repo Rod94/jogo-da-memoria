@@ -29,6 +29,7 @@ const btnCollabcode = (function() {
     event.preventDefault();
 
     window.location.hash = `#/${path}`;
+    location.reload(true);
   }
 
   module.render = ({content = "", path = ""}) => {
