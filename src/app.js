@@ -1,4 +1,4 @@
 (function () {
-  //login();
-  signup();
+  login();
+  //signup();
 })();
