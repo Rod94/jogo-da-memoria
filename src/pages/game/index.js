@@ -6,7 +6,9 @@ const game = (function() {
 
   const createMemoryCard = memoryCard.create();
 
-  const $pointBar = pointBar.create();
+  const $pointBar = pointBar.create({
+    path: "login"
+  });
 
   const $layerStart = layerStart.render("Start");
 
