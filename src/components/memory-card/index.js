@@ -23,16 +23,22 @@ const memoryCard = (function() {
       position: absolute;
     }
     .memory-card.-active .card,
-    .memory-card.-score .card{
+    .memory-card.-score .card,
+    .memory-card.-noscore .card{
       display: none;
     }
     .memory-card.-active .card.-front,
-    .memory-card.-score .card.-front{
+    .memory-card.-score .card.-front,
+    .memory-card.-noscore .card.-front{
       display: flex;
     }
+    .memory-card.-noscore .card.-front{
+      border-top: 3px inset #ea4335;
+      border-left: 3px inset #ea4335;
+    }
     .memory-card.-score .card.-front{
-      border-top: 3px inset #238E23;
-      border-left: 3px inset #238E23;
+      border-top: 3px inset #28cc2e;
+      border-left: 3px inset #28cc2e;
     }
     .memory-card .card.-front {
       background-color: #fff;
@@ -99,15 +105,13 @@ const memoryCard = (function() {
       const check = [
         ...new Set( //objeto Set permite armazenar valores, nesse caso está mapeando e pegando o "src"
           $checkCards.map((
-            card //arrow function
+            card
           ) => card.querySelector(".-front .icon").getAttribute("src"))
         )
       ];
       if (check.length == 1) {
         store.score += 20;
-        document.querySelector(".point-bar > .number").textContent = `Score: ${
-          store.score
-        }`;
+        document.querySelector(".point-bar > .number").textContent = `Score: ${store.score}`;
         $checkCards.forEach(card => {
           //arrow function
           card.classList.add("-score");
@@ -116,10 +120,21 @@ const memoryCard = (function() {
       } else {
         console.log("Errou! Tente novamente");
         setTimeout(() => {
+          store.score -= 5;
+          document.querySelector(".point-bar > .number").textContent = `Score: ${store.score}`
+          const $activedCards = document.querySelectorAll(
+            ".memory-card.-active"
+          );
+          $activedCards.forEach($memoryCard => {
+            $memoryCard.classList.add("-noscore");
+          });
+        }, 400);
+        setTimeout(() => {
           const $activeMemoryCards = document.querySelectorAll(
             ".memory-card.-active"
           );
           $activeMemoryCards.forEach($memoryCard => {
+            $memoryCard.classList.remove("-noscore");
             $memoryCard.classList.remove("-active");
           });
           qtdActiveMemoryCard = 0;
@@ -133,11 +148,3 @@ const memoryCard = (function() {
     handleClick: module.handleClick //arrow function
   };
 })();
-
-//nome do parametro poderia ser qualquer um!
-//if ternário, se for verdade a condição antes do `?` entao atribui o valor depois do ?
-//caso seja mentira, será atribuido o que estiver depois do :
-
-//parametros pegos da page, sendo atribuidos
-
-// metodo forEach percorre um array.
