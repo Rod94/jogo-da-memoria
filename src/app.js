@@ -12,6 +12,6 @@
   } else {
     paths[hash]();
   }
-
+  window.onpopstate = () => location.reload(true);
 
 })();
