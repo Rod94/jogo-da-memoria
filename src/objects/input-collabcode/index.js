@@ -17,14 +17,13 @@ const inputCollabcode = (function() {
         margin-top: 30px;
       }
     `;
-
     $head.insertAdjacentElement("beforeend", $style);
   };
 
   module.render = ({ id = "", placeholder = "", type = "text" }) => {
     module._style();
 
-    return `<input id="${id}" class="input-collabcode" placeholder=${placeholder} type=${type}>`;
+    return `<input class="input-collabcode" id="${id}" placeholder="${placeholder}" type="${type}" required>`;
   };
 
   return {

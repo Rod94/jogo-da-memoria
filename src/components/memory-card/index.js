@@ -110,7 +110,7 @@ const memoryCard = (function() {
         )
       ];
       if (check.length == 1) {
-        store.score += 20;
+        store.score += 50;
         document.querySelector(".point-bar > .number").textContent = `Score: ${store.score}`;
         $checkCards.forEach(card => {
           //arrow function
@@ -120,7 +120,11 @@ const memoryCard = (function() {
       } else {
         console.log("Errou! Tente novamente");
         setTimeout(() => {
-          store.score -= 5;
+          if (store.score === 0) {
+            store.score = 0;
+          } else {
+          store.score -= 10;
+        }
           document.querySelector(".point-bar > .number").textContent = `Score: ${store.score}`
           const $activedCards = document.querySelectorAll(
             ".memory-card.-active"

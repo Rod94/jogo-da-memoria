@@ -32,6 +32,7 @@ const gameButton = (function() {
 
   module.render = content => {
     module._style();
+    
     return `
       <button class="game-button">${content}</button>
     `;

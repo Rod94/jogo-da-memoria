@@ -16,6 +16,7 @@ const formSignup = (function () {
   module._children = () => {
     const $labelCollabcode = labelCollabcode.render("E-mail");
     const $inputCollabcode = inputCollabcode.render({
+      id: "email",
       placeholder: "example@gmail.com",
       type: "email"
     });
@@ -27,12 +28,14 @@ const formSignup = (function () {
 
     const $passwordCollabcode = labelCollabcode.render("Password");
     const $inputPasswordCollabcode = inputCollabcode.render({
+      id: "password",
       placeholder: "********",
       type: "password"
     });
 
     const $confirmCollabcode = labelCollabcode.render("Confirm Password");
     const $inputconfirmCollabcode = inputCollabcode.render({
+      id: "password",
       placeholder: "********",
       type: "password"
     });

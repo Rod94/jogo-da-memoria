@@ -9,8 +9,8 @@ const labelCollabcode = (function() {
         color: #9c9fa0;
         font-size: 16px;
         display: block;
-      }`;
-
+      }
+      `;
     $head.insertAdjacentElement("beforeend", $style);
   };
 
