@@ -42,5 +42,4 @@ const game = (function() {
   $root.insertAdjacentElement("beforeend", $cardsWrapper);
   $root.insertAdjacentHTML("beforeend", $layerStart);
 });
-//caminho dos parametros na ordem `alt, src, nameClass`
-//page passa informação para o components
+
