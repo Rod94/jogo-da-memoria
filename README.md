@@ -2,6 +2,8 @@
 
 - Jogo criado usando JavaScript(ES6).
 
-
-
-![jogo](/img/screenjogo.png)  ![erro](/img/screenerro.png)  <p align="center">![acerto](/img/screenacerto.png)</p> 
+<p align="center">
+<img src="/img/screenjogo.png">
+<img src="/img/screenerro.png">
+<img src="/img/screenacerto.png">
+</p>
