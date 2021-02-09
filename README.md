@@ -1,7 +1,7 @@
 # JOGO DA MEMÓRIA
 
-Jogo criado em JavaScript puro, CSS in JS e HTML.
+- Jogo criado em JavaScript(ES6).
 
-O jogo da memória possui 3 telas que são: Submit, Login e o Game.
 
-![jogo](/img/screenjogodamemoria.png)   ![acerto](/img/acertoujogodamemoria.png)
+
+![jogo](/img/screenjogo.jpg)   ![acerto](/img/screenacerto.png)

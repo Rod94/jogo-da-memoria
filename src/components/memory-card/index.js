@@ -62,7 +62,7 @@ const memoryCard = (function() {
   `;
     $head.insertBefore($style, null);
 
-    //está retornando o JSON do createMemoryCard da pages
+    //({}) <= object destructuring
     return ({ src, alt }) => ` 
       <div class="memory-card" onClick="memoryCard.handleClick(this)">
         <article class = "card -front">
