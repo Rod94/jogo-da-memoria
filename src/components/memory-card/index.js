@@ -110,21 +110,19 @@ const memoryCard = (function() {
         )
       ];
       if (check.length == 1) {
-        store.score += 50;
+        store.score += 30;
         document.querySelector(".point-bar > .number").textContent = `Score: ${store.score}`;
         $checkCards.forEach(card => {
-          //arrow function
           card.classList.add("-score");
           card.classList.remove("-active");
         });
       } else {
-        console.log("Errou! Tente novamente");
         setTimeout(() => {
-          if (store.score === 0) {
-            store.score = 0;
+          if (store.score > 0) {
+            store.score -= 10;
           } else {
-          store.score -= 10;
-        }
+            store.score -= 10;
+          }
           document.querySelector(".point-bar > .number").textContent = `Score: ${store.score}`
           const $activedCards = document.querySelectorAll(
             ".memory-card.-active"
