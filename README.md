@@ -1,7 +1,7 @@
 # JOGO DA MEMÓRIA
 
-- Jogo criado em JavaScript(ES6).
+- Jogo criado usando JavaScript(ES6).
 
 
 
-![jogo](/img/screenjogo.jpg)   ![acerto](/img/screenacerto.png)
+![jogo](/img/screenjogo.png)  ![erro](/img/screenerro.png)  ![acerto](/img/screenacerto.png)  
