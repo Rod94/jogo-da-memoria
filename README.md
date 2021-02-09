@@ -4,4 +4,4 @@
 
 
 
-![jogo](/img/screenjogo.png)  ![erro](/img/screenerro.png)  <p align="center">![acerto](/img/screenacerto.png) </p> 
+![jogo](/img/screenjogo.png)  ![erro](/img/screenerro.png)  <p align="center">![acerto](/img/screenacerto.png)</p> 
