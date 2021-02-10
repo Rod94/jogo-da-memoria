@@ -11,7 +11,7 @@ const logoCollabCode = (function() {
         display: inline-block;
       }
       .logo-collabcode > .logo {
-        width: 175px;
+        width: 150px;
       }
     `;
     $head.insertAdjacentElement("beforeend", $style);
